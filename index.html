@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Sorting Visualizer</title>
+
+</head>
+<body>
+    <header>
+        <h1><a href="#">Sorting Visualizer</a></h1>
+        <nav>
+            <ul>
+                <button type="button" onclick="Reset()" id="reset" title="Return the playfield to its original state." style="background-color: #faab93">Reset</li>
+                <button type="button" onclick="Step()" id="step" title="Take the next step in the algorithm." style="background-color: #9ee6eb">Step!</li>
+                <button type="button" onclick="Step(true)" id="play" title="Play through the algorithm" style="background-color: rgb(181, 241, 189)">Play!!</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="settings">
+            <span id="home" ><a href="http://iurii.io">iurii.io</a></span>
+            <span id="sizeSelectorSpan">
+                <label for="sizeSelector">04</label>
+                <input type="range" min="2" max="20" id="sizeSelector" step="1">
+            </span>
+            <span id="speedChoice">
+                <select id="speedSelector">
+                    <option value="turtle">🐢 Turtle 🐢</option>
+                    <option value="human">Human 👋👋</option>
+                    <option value="cheetah">🐆 Cheetah 🐆</option>
+                    <option value="rocket">🚀 Rocket 🚀</option>
+                    <option value="ufo">🛸 UFO 🛸</option>
+                </select>
+            </span>
+        </div>
+        <div id="visual">
+            <div id="steps"></div>
+            <div id="graph"></div>
+        </div>
+
+    </main>
+    <script src="sort.js"></script>
+    <noscript>
+        <h1>Enable JavaScript to visualize the Sort Algorithms.</h1>
+    </noscript>
+</body>
+</html>
